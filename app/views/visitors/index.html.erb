@@ -6,6 +6,7 @@
 
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
+  <%= select_tag(:q, options_for_select([['Testing Controllers with RSpec', 0], ['Make a factory for test data with factory_girl', 1]])) %>
+
   <%= submit_tag("Search") %>
 <% end %>
